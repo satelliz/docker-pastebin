@@ -1,6 +1,7 @@
-FROM node
+FROM node:alpine
 MAINTAINER Markus Kosmal <b@m-ko.de>
 
+RUN apk add --update git
 RUN git clone https://github.com/seejohnrun/haste-server.git /opt/haste
 WORKDIR /opt/haste
 RUN rm /opt/haste/about.md
